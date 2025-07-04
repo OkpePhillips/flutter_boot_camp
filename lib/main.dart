@@ -33,23 +33,26 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(title: Text("My Profile")),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 10),
-            Container(
-              height: 200,
-              width: 200,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: Colors.blue, width: 3),
-              ),
-              child: ClipOval(
-                child: Image.network(
-                  'https://i.ibb.co/C3TXQrv5/My-passportpic-removebg-preview-1.png',
+            Center(
+              child: Container(
+                height: 200,
+                width: 200,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.blue, width: 3),
+                ),
+                child: ClipOval(
+                  child: Image.network(
+                    'https://i.ibb.co/C3TXQrv5/My-passportpic-removebg-preview-1.png',
+                  ),
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(8.0),
               child: Text(
                 'Passionate Software Engineer with expertise in Flutter and web development. I build scalable, user-friendly applications and enjoy mentoring the next generation of tech talent.',
                 textAlign: TextAlign.justify,
@@ -93,7 +96,7 @@ Widget buildContactSection() {
       children: [
         Text(
           'Contact Information',
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
         ),
         SizedBox(height: 4),
         Text("Address: Makurdi, Benue State, Nigeria"),
@@ -111,7 +114,10 @@ Widget buildSkillsSection() {
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Skills', style: TextStyle(fontWeight: FontWeight.bold)),
+        Text(
+          'Skills',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+        ),
         SizedBox(height: 4),
         Text("Software Engineering"),
         Text('Mobile Development'),
