@@ -119,11 +119,22 @@ Widget buildSkillsSection() {
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
         ),
         SizedBox(height: 4),
-        Text("Software Engineering"),
-        Text('Mobile Development'),
-        Text('Data Analysis'),
-        Text('Monitoring and Evaluation'),
+        skillItem("Software Engineering"),
+        skillItem('Mobile Development'),
+        skillItem('Data Analysis'),
+        skillItem('Monitoring and Evaluation'),
       ],
     ),
+  );
+}
+
+Widget skillItem(String text) {
+  return Row(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Icon(Icons.check, size: 20, color: Colors.green),
+      SizedBox(width: 6),
+      Expanded(child: Text(text)),
+    ],
   );
 }
